@@ -1,10 +1,15 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import RootNavigation from './navigation/index';
+
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome To React Boiler Plate</h1>
-    </div>
+    <>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <RootNavigation />
+      </BrowserRouter>
+    </>
   );
 };
 
